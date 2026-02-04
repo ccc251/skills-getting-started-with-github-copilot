@@ -105,3 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize app
   fetchActivities();
 });
+
+// Deelnemers worden al weergegeven in de activity cards met participants-section.
+// Geen extra wijzigingen nodig.
