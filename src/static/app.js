@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${details.description}</p>
           <p><strong>Schedule:</strong> ${details.schedule}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
-          <div class="participants-info participants-section" aria-live="polite">
+          <div class="participants participants-section" aria-live="polite">
             <h5>Participants (${(details.participants || []).length})</h5>
             <ul class="participants-list" role="list">
               <!-- participants will be appended here -->
@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (participants.length > 0) {
           participants.forEach((p) => {
             const li = document.createElement("li");
-            li.className = "participant-info";
-            li.textContent = p;
+            // show as a small badge for prettiness
+            li.innerHTML = `<span class="participant-badge">${p}</span>`;
             participantsUl.appendChild(li);
           });
         } else {
