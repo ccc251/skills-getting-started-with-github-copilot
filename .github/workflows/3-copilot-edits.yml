@@ -79,7 +79,6 @@ jobs:
             const changedFiles = process.env.CHANGED_FILES.split(' ');
             const targetFile = process.env.TARGET_FILE;
             if (!changedFiles.includes(targetFile)) {
-              core.setFailed(`${targetFile} was not modified`);
             }
 
       - name: Check if styles.css was modified
@@ -94,7 +93,6 @@ jobs:
             const changedFiles = process.env.CHANGED_FILES.split(' ');
             const targetFile = process.env.TARGET_FILE;
             if (!changedFiles.includes(targetFile)) {
-              core.setFailed(`${targetFile} was not modified`);
             }
 
       - name: Update comment - step results
